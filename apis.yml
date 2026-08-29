@@ -11,6 +11,9 @@ description: >-
   CIMI2603, Inc. Stockpile never published a public API, developer portal or machine-readable contract;
   its only public developer surface was an embeddable stock/brand modal, archived in 2016.
 url: https://raw.githubusercontent.com/api-evangelist/stockpile/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Stockpile never published a public API, developer portal or machine-readable contract; its only public developer surface was an embeddable stock/brand modal, archived in 2016."
 image: https://avatars.githubusercontent.com/u/5335174?v=4
 x-type: company
 x-source: harvest:secondary-market
