@@ -1,0 +1,61 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  https://www.stockpile.com/ (live fetch 2026-08-29, HTTP 200 — the domain now serves only a
+  gift-card refund request form), https://www.stockpile.com/terms and /privacy (HTTP 200, both
+  dated 07/23/2026 and both issued by CIMI2603, Inc.), and
+  https://www.doctorofcredit.com/stockpile-to-close-on-april-17-2026-accounts-transferred-to-public-stash-apex/
+  for the closure date and account-transfer destinations.
+note: >-
+  This file records a COMPANY lifecycle, not an API lifecycle. Stockpile published no versioned API,
+  no deprecation policy, no Sunset/Deprecation header contract, no SLA and no status page, so no
+  StatusPage or Deprecation pointer is emitted. What it does have is a terminal event with a hard
+  date, which is the single most decision-relevant lifecycle fact available about this provider.
+company_status: defunct
+api_lifecycle:
+  versioning_scheme: null
+  deprecation_policy: null
+  sunset_headers: false
+  sla: null
+  status_page: null
+  deprecated_operations: []
+  basis: No public API or machine-readable contract was ever published — nothing to version or deprecate.
+events:
+- date: '2010'
+  type: founded
+  detail: Stockpile founded in Palo Alto, California; stock gift cards and fractional-share investing.
+- date: '2016-11-04'
+  type: developer-surface-retired
+  detail: >-
+    Last commit to the Stockpile Modal embeddable component; the repository was later archived and its
+    CDN loader host modal.stockpile.com stopped resolving.
+- date: '2024-04-09'
+  type: package-abandoned
+  detail: >-
+    Last publish of @stockpile/greendot-sdk (v1.131.0), the company's only package on a public registry.
+- date: '2026-04-17'
+  type: shutdown
+  detail: >-
+    Stockpile closed. Customer accounts were transferred to Public, Stash and Apex. Unredeemed gift
+    cards moved to a refund process rather than a redemption path.
+- date: '2026-07-23'
+  type: successor-surface
+  detail: >-
+    Terms of Service and Privacy Policy for the post-shutdown gift-card refund service published on
+    www.stockpile.com, issued by CIMI2603, Inc. (an Arizona corporation) with contact
+    StockpileGiftCardRefunds@cardcompliant.com. These govern the refund microsite, not any Stockpile
+    product, which is why they are NOT wired as Stockpile TermsOfService/PrivacyPolicy pointers.
+- date: '2026-08-29'
+  type: probed
+  detail: >-
+    www.stockpile.com serves only the refund form; /fees, /media, /api, /developers, /llms.txt,
+    /robots.txt, /sitemap.xml and every /.well-known/* path return 404, and help.stockpile.com,
+    api.stockpile.com, developer.stockpile.com, docs.stockpile.com and modal.stockpile.com do not
+    resolve.
+successors:
+- name: Public
+  role: Receiving broker for transferred adult accounts
+- name: Stash
+  role: Receiving broker for transferred accounts
+- name: Apex
+  role: Clearing/receiving firm for transferred accounts

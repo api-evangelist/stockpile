@@ -1,0 +1,38 @@
+generated: '2026-08-29'
+method: probed
+source: >-
+  Live GET probes of https://www.stockpile.com/.well-known/* on 2026-08-29 with a browser
+  User-Agent. Every path returned 404 from the gift-card refund microsite that is now the only
+  thing served on the domain. No .well-known document is published; no WellKnown or SecurityTxt
+  pointer is emitted, because a recorded absence is not a presence.
+note: >-
+  Stockpile's other historic hosts no longer resolve (help.stockpile.com, modal.stockpile.com,
+  api.stockpile.com, developer.stockpile.com, docs.stockpile.com all NXDOMAIN as of 2026-08-29),
+  so www.stockpile.com is the only host left to probe.
+hosts:
+- host: www.stockpile.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

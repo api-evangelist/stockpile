@@ -1,0 +1,57 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  https://github.com/StockpileInc/stockpile-modal (repository metadata + README, read verbatim
+  2026-08-29), plus DNS/HTTP probes of the loader host named in that README.
+note: >-
+  This is the ONLY developer-facing surface Stockpile ever published: a drop-in JavaScript modal a
+  partner site embedded to show stock/brand information and hand back a selected gift item. It was
+  never accompanied by a REST API, an OpenAPI, or a developer portal. The component is retired — the
+  repository is archived by the company and the CDN host that served the loader no longer resolves.
+components:
+- name: Stockpile Modal
+  family: embeddable-widget
+  status: retired
+  description: >-
+    Client-side modal that displays information about a stock or brand ("gift item") on a third-party
+    site or web application, and returns the gift item the visitor selected via an onClose callback.
+  repository: https://github.com/StockpileInc/stockpile-modal
+  repository_archived: true
+  repository_last_push: '2016-11-04'
+  demo: https://modal.stockpile.com/demo.html
+  demo_status: unreachable
+  loader:
+    type: cdn-script-tag
+    url: https://modal.stockpile.com/init.js
+    pinned: false
+    host_dns: NXDOMAIN
+    checked: '2026-08-29'
+  environments:
+  - qa
+  - production
+  auth:
+    style: publishable-key
+    init_signature: Stockpile.init('<environment>', '<publishable key>')
+    key_format: pk_<environment>_<32 hex characters>
+    issuance: >-
+      By email request to dl-eng@stockpile.com — there was no self-service key issuance and no
+      developer portal.
+  api_surface:
+    open: Stockpile.open(giftItemCode)
+    on_close: Stockpile.onClose(function (giftItem) { ... })
+  data_model:
+    gift_item:
+      description: >-
+        A purchasable gift on Stockpile — usually a stock or security, sometimes tied to a specific
+        consumer brand (for example "Amazon Kindle" against AMZN).
+      fields:
+      - brandName
+      - companyName
+      - companyPopularName
+      - giftItemCode
+      - securitySymbol
+      code_format: '<symbol>::<brand>::<symbol>:: (for example AMZN::KIND::AMZN:: or AAPL::::AAPL::)'
+counts:
+  total: 1
+  live: 0
+  retired: 1

@@ -64,5 +64,20 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Stockpile is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Stockpile was a Palo Alto, California consumer investing company — "the money app for families" —
+that let people buy, sell and gift fractional shares in stocks and ETFs, and that popularized the
+stock gift card, redeemed into a brokerage account at Stockpile Investments, Inc. (FINRA/SIPC).
+
+**Stockpile wound down on April 17, 2026.** Customer accounts were transferred to Public, Stash and
+Apex. `www.stockpile.com` now serves only a Stockpile gift-card refund request form, operated on the
+issuer's behalf by CIMI2603, Inc.
+
+**Stockpile never published a public API.** There is no developer portal, no OpenAPI or other
+machine-readable contract, no MCP server and no agent card — every probe is recorded in
+`well-known/stockpile-well-known.yml` and `apis.yml` `x-coverage`. The only developer surface the
+company ever shipped was an embeddable stock/brand modal, archived in 2016 and now unreachable; it is
+documented in `components/stockpile-components.yml`.
+
+- Company site (refund form only): https://www.stockpile.com/
+- GitHub organization: https://github.com/StockpileInc
+- Secondary-market listing this profile was harvested from: https://www.nasdaqprivatemarket.com/

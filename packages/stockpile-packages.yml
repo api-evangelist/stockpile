@@ -1,0 +1,52 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  npm registry search for "stockpile" plus the @stockpile scope (registry.npmjs.org, unauthenticated,
+  2026-08-29), and the StockpileInc GitHub organization (https://github.com/StockpileInc). PyPI, RubyGems,
+  crates.io, NuGet, Maven Central and pkg.go.dev were not searched separately because Stockpile published
+  no API and therefore no client libraries in any language.
+note: >-
+  Stockpile shipped NO client SDK for a Stockpile API, because there was no public Stockpile API. The one
+  first-party package found on a public registry is an internal wrapper around a THIRD PARTY's SDK
+  (Green Dot, Stockpile's banking-as-a-service provider for the Family Plus debit/savings product). It is
+  therefore recorded here under type Packages only — no SDKs pointer is emitted, because crediting an
+  sdk_count for a package that wraps someone else's API would be false credit.
+packages:
+- name: '@stockpile/greendot-sdk'
+  registry: npm
+  url: https://www.npmjs.com/package/@stockpile/greendot-sdk
+  metadata_url: https://registry.npmjs.org/@stockpile%2Fgreendot-sdk
+  official: true
+  official_basis: >-
+    Published under the @stockpile npm scope by a maintainer with an @stockpile.com email address
+    (r.subramanian.ctr@stockpile.com), read from the registry metadata document.
+  language: javascript
+  version: 1.131.0
+  published: '2024-04-09'
+  first_published: '2024-03-08'
+  release_count: 42
+  wraps: Green Dot banking-as-a-service SDK
+  is_api_client_for_this_provider: false
+  status: abandoned
+  note: >-
+    Last publish 2024-04-09, two years before the company wound down on 2026-04-17. No repository,
+    homepage or README is declared in the registry metadata. Not a client library for a Stockpile API.
+- name: stockpile-modal
+  registry: none
+  url: https://github.com/StockpileInc/stockpile-modal
+  official: true
+  official_basis: Published in the StockpileInc GitHub organization, whose profile links www.stockpile.com.
+  language: javascript
+  version: null
+  published: null
+  status: retired
+  note: >-
+    Distributed as a CDN script tag (https://modal.stockpile.com/init.js), never as a registry package,
+    so there is no metadata endpoint to read a version from — and the script URL is UNPINNED, so a
+    consumer could not tell what build they were getting either. The repository was archived by the
+    company and the CDN host modal.stockpile.com no longer resolves (NXDOMAIN, 2026-08-29). Detailed in
+    components/stockpile-components.yml.
+counts:
+  total: 2
+  official: 2
+  api_clients: 0
