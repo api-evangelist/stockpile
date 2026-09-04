@@ -14,6 +14,18 @@ url: https://raw.githubusercontent.com/api-evangelist/stockpile/refs/heads/main/
 x-api-posture: no-product-api
 x-api-posture-basis: observed
 x-api-posture-note: "Stockpile never published a public API, developer portal or machine-readable contract; its only public developer surface was an embeddable stock/brand modal, archived in 2016."
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://avatars.githubusercontent.com/u/5335174?v=4
 x-type: company
 x-source: harvest:secondary-market
