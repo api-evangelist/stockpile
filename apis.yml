@@ -36,7 +36,7 @@ created: '2026-08-29'
 modified: '2026-09-15'
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Investing
 - Brokerage
 - Fractional Shares
@@ -54,6 +54,7 @@ tags_raw:
 - Gift Cards
 - Consumer Finance
 - Defunct
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
